@@ -152,7 +152,11 @@ ssh -L 2020:ipserver2 usuario@ipserver1
 
 ssh -R 2020:localhost:22 root@ipexterno 
 
+## add user a sudo group
 
+usermod -aG sudo newuser
+
+## Verify cloud manager 
 
 sudo nano /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
 
@@ -177,19 +181,4 @@ ip link
 
 sudo netplan apply
 ip addr show dev ens3
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
