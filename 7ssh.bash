@@ -156,11 +156,27 @@ ssh -R 2020:localhost:22 root@ipexterno
 
 
 
+## Network configuration /etc/netplan/01-netcfg.yaml
 
 
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens3:
+      dhcp4: no
+      addresses:
+        - 192.168.121.221/24
+      gateway4: 192.168.121.1
+      nameservers:
+          addresses: [8.8.8.8, 1.1.1.1]
 
 
+############ 
+ip link
 
+sudo netplan apply
+ip addr show dev ens3
 
 
 
