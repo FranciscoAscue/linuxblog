@@ -154,7 +154,7 @@ ssh -R 2020:localhost:22 root@ipexterno
 
 
 
-
+sudo nano /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
 
 ## Network configuration /etc/netplan/01-netcfg.yaml
 
