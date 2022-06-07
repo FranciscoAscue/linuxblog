@@ -13,7 +13,7 @@ If you using zsh themes of oh-my-zsh, may be the prompt is no set correctly.
 Search theme of .oh-my-zsh/themes 
 add the following lines to solving the problem
 
-```theme
+```json
  function conda_info {
       if [[ -n "$CONDA_DEFAULT_ENV" ]]; then
          echo "%{$fg[green]%}‹${CONDA_DEFAULT_ENV}›%{$reset_color%}"
