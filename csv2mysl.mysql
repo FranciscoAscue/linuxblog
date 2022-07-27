@@ -1,7 +1,15 @@
+ SET GLOBAL local_infile=1;
+
+## mysql -u root -p --local-infile
+
+
 USE SARS_GENOMES
-LOAD DATA INFILE ('/home/administrador/Documentos/file.csv')
+LOAD DATA LOCAL INFILE '/var/lib/mysql-files/212.csv'
 INTO TABLE nextrain2gisaid
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"' LINES
 TERMINATED BY '\n'
 (NETLAB, CORRIDA, LINAGES, VOC_VOI, COVERAGE, N_PERCENTAGE);
+
+
+LOAD DATA LOCAL INFILE '/var/lib/mysql-files/312.csv' INTO TABLE nextrain2gisaid FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' (NETLAB, CORRIDA, LINAGES, VOC_VOI, COVERAGE, N_PERCENTAGE);
