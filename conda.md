@@ -104,6 +104,14 @@ ZSH_THEME_VIRTUALENV_PREFIX=" ${FG[239]}using${FG[243]} «"
 ZSH_THEME_VIRTUALENV_SUFFIX="»%{$reset_color%}"
 ```
 
+### half-life theme
+
+```zsh
+setopt prompt_subst
+PROMPT="${FG[060]}% ‹\${CONDA_DEFAULT_ENV}› ${FG[050]}%n%{$reset_color%} in ${limegreen}%c%{$reset_color%}\$(virtualenv_prompt_info)\$(ruby_prompt_info)\$vcs_info_msg_0_${orange} λ%{$reset_color%} "
+```
+
+
 If that not solving the problem probe with the following
 
 
