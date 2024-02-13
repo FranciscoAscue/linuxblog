@@ -37,6 +37,15 @@ Output
 5 rows in set (0.00 sec)
 ```
 
+#### no accept password
+
+```bash
+SHOW VARIABLES LIKE 'validate_password%';
+
+SET GLOBAL validate_password.length = 6;
+SET GLOBAL validate_password.number_count = 0;
+````
+
 ```mysql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'password';
 
