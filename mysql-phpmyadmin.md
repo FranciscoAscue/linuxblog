@@ -63,7 +63,6 @@ sudo service start mysql ## another optiom
 
 before to install phpmyadmin install apache `sudo apt install apache2`
 
-```bash
 # install the following
 
 sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
