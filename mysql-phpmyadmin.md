@@ -90,7 +90,8 @@ sudo systemctl restart apache2
 ##### if you work in localhost go to `http://localhost/phpmyadmin`
 
 
-#### Errors and some problems 
+### Errors and some problems 
+
 if phpmyadmin is not avaible in the link 
 `http://localhost/phpmyadmin`
 Yo need to add the following line in the the config file of apache
@@ -101,8 +102,23 @@ add in the end:
 
 `Include /etc/phpmyadmin/apache.conf`
 
+#### php code in URL instead to PHPMyAdmin 
 
-restore root root user's full privileges
+```bash
+sudo a2enmod php8.1
+## Verify if this working
+```
+**if exist mpm_event issue, disabled this module**  
+```bash
+sudo a2dismod mpm_event
+sudo systemctl restart apache2
+sudo a2enmod mpm_prefork
+sudo systemctl restart apache2
+sudo a2enmod php8.1
+sudo systemctl restart apache2
+```
+
+#### Restore root user's full privileges
 
 add the the line `skip-grant-tables` in the following file:
 
