@@ -108,7 +108,8 @@ ZSH_THEME_VIRTUALENV_SUFFIX="»%{$reset_color%}"
 
 ```zsh
 setopt prompt_subst
-PROMPT="${FG[060]}‹\${CONDA_DEFAULT_ENV}› ${FG[050]}%n%{$reset_color%} in ${FG[027]}%c%{$reset_color%}\$(virtualenv_prompt_info)\$(ruby_prompt_info)\$vcs_info_msg_0_${FG[060]} λ%{$reset_color%} "
+PROMPT="${FG[246]}‹\${CONDA_DEFAULT_ENV}› ${FG[050]}%n%{$reset_color%} in ${FG[004]}%c%{$reset_color%}\$(virtualenv_prompt_info)\$(ruby_prompt_info)\$vcs_info_msg_0_${FG[147]} λ%{$reset_color%} "
+
 ```
 
 
