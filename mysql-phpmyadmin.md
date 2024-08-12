@@ -69,9 +69,9 @@ sudo service start mysql ## another optiom
 /ect/init.d/mysql start # anther option and sudo permissions
 
 ### install phpmyadmin
-
-before to install phpmyadmin install apache `sudo apt install apache2`
-
+#before to install phpmyadmin install apache:
+sudo apt install apache2
+sudo apt install libapache2-mod-php
 # install the following
 
 sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
